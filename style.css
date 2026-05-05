@@ -1,0 +1,253 @@
+/* ================================
+   RESET / BASE
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* ================================
+   HEADER
+================================ */
+.site-header {
+    background-color: #ff6f91; /* Rose */
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header-text .slogan {
+    font-size: 1.2rem;
+}
+
+.header-buttons {
+    margin-top: 15px;
+}
+
+.header-buttons .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #fff;
+    color: #ff6f91;
+}
+
+.btn-primary:hover {
+    background-color: #ffd6de;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.header-image img {
+    width: 200px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+/* ================================
+   NAVIGATION
+================================ */
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6f91;
+}
+
+/* ================================
+   SECTIONS
+================================ */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+main section {
+    margin-bottom: 60px;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+}
+
+main section h2 {
+    margin-bottom: 20px;
+    color: #ff6f91;
+    font-size: 1.8rem;
+}
+
+/* ================================
+   PROJETS / COMPETENCES
+================================ */
+.projects-grid, .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card, .skill-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+}
+
+.project-card:hover, .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* ================================
+   FORMULAIRE
+================================ */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6f91;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #ff4f70;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer a {
+    color: #ff6f91;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .social-icons img {
+    width: 30px;
+    margin: 0 5px;
+    vertical-align: middle;
+    transition: 0.3s;
+}
+
+footer .social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-image img {
+        margin-top: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+}
